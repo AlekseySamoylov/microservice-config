@@ -12,4 +12,4 @@ zuul:
   routes:
     client:
       path: /client/**
-      serviceId: client-service
+      serviceId: service-discovery-client
