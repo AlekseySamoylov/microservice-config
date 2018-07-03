@@ -1,11 +1,9 @@
 eureka:
   instance:
     metadataMap:
-      zone: region2
+      region: USA
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
   port: 8082
-application:
-  region: USA
