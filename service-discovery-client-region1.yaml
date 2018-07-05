@@ -12,7 +12,12 @@ spring:
   boot:
     admin:
       url: http://localhost:8086
+  profiles:
+    active: production
+  application:
+    name: client-app-usa
 
 management:
   security:
     enabled: false
+
