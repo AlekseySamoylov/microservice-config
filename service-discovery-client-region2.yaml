@@ -15,7 +15,7 @@ spring:
   profiles:
     active: production
   application:
-    name: client-app-usa
+    name: service-discovery-client
 
 management:
   security:
