@@ -10,3 +10,16 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+
+spring:
+  boot:
+    admin:
+      url: http://localhost:8086
+  profiles:
+    active: production
+  application:
+    name: service-discovery
+
+management:
+  security:
+    enabled: false
