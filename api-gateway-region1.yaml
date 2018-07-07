@@ -13,6 +13,9 @@ zuul:
     client:
       path: /client/**
       serviceId: service-discovery-client
+    kotlin-client:
+      path: /kotlin-client/**
+      serviceId: service-kotlin-client
 
 spring:
   boot:
