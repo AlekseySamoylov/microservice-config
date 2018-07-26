@@ -1,22 +1,3 @@
-eureka:
-  client:
-    service-url:
-      default-zone: http://localhost:8761/eureka/
-    register-with-eureka: false
-
-server:
-  port: 8765
-
-zuul:
-  prefix: /api
-  routes:
-    client:
-      path: /client/**
-      serviceId: service-discovery-client
-    kotlin-client:
-      path: /kotlin-client/**
-      serviceId: service-kotlin-client
-
 spring:
   boot:
     admin:
@@ -25,6 +6,31 @@ spring:
     active: production
   application:
     name: api-gateway
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    register-with-eureka: false
+
+server:
+  port: ${PORT:8765}
+
+zuul:
+  prefix: /api
+  routes:
+    client:
+      path: /prod-java-client/**
+      serviceId: service-discovery-client
+    kotlin-client:
+      path: /prod-kotlin-client/**
+      serviceId: service-kotlin-client
+    order-service:
+      path: /prod-order/**
+      serviceId: order-service
+    product-service:
+      path: /prod-product/**
+      serviceId: service-kotlin-client
 
 management:
   security:
